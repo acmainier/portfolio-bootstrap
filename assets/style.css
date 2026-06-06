@@ -23,6 +23,10 @@ html {
   background-color: var(--off-white);
 }
 
+#about-me p {
+  text-align: justify;
+}
+
 /* header {
   position: sticky;
   top: 0;
@@ -33,11 +37,12 @@ html {
 body {
   color: var(--text-dark);
   font-family: "Trebuchet MS", Arial, sans-serif;
-  max-width: 900px;
-  display: flex;
+
+  /*display: flex;
   flex-direction: column;
+   max-width: 900px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 16px;*/
 }
 
 /* nav {
@@ -74,23 +79,23 @@ a:hover {
 
 h2 {
   text-decoration: underline var(--green-dark);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  /*  margin-top: 8px;
+  margin-bottom: 8px; */
 }
 
-.about-me-container {
+/* .about-me-container {
   display: flex;
 }
 
 .about-me-text-container {
   margin-right: 16px;
   text-align: justify;
-}
+} 
 
 .portrait {
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--shadow);
-}
+} */
 
 .cards-container {
   display: flex;
@@ -127,10 +132,10 @@ h2 {
 }
 
 section {
-  margin-top: 16px;
+  /* margin-top: 16px;
   padding: 8px;
+  border-radius: 12px;*/
   background-color: var(--cream);
-  border-radius: 12px;
 }
 
 .skills-container {
@@ -206,7 +211,7 @@ section {
   color: var(--green-dark);
 }
 
-footer {
+/* footer {
   margin-top: auto;
   text-align: center;
   padding: 12px 0;
@@ -220,4 +225,4 @@ footer {
     display: block;
     margin: 0 auto;
   }
-}
+} */
