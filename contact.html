@@ -2,56 +2,96 @@
 <html lang="en">
   <head>
     <title>Anne-Cécile Mainier - Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <header>
-      <nav aria-label="Main navigation">
-        <h1 id="name">Anne-Cécile Mainier</h1>
-        <ul class="nav-items">
-          <li class="nav-item"><a href="./index.html#about-me">About Me</a></li>
-          <li class="nav-item"><a href="./index.html#projects">Projects</a></li>
-          <li class="nav-item"><a href="./index.html#skills">Skills</a></li>
-          <li class="nav-item"><a href="./contact.html">Contact</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand fs-3" href="./index.html"
+            >Anne-Cécile Mainier</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#about-me">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <section id="contact">
-        <h2>Contact</h2>
+    <main class="container">
+      <section class="mt-3 p-2 rounded-3" id="contact">
+        <h2 class="mt-2 mb-2">Contact</h2>
         <p>Have an interesting project? I would love to hear about it!</p>
-        <form class="contact-form" action="submit.php" method="post">
-          <div class="form-item">
-            <label for="contact-name">Name</label>
+        <form action="submit.php" method="post">
+          <div class="mb-3">
+            <label class="form-label" for="contact-name">Name</label>
             <input
               type="text"
               id="contact-name"
+              class="form-control"
               name="name"
               placeholder="Your name"
             />
           </div>
-          <div class="form-item">
-            <label for="email">Email</label>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
             <input
               type="email"
               id="email"
+              class="form-control"
               name="email"
               placeholder="Your email"
             />
           </div>
-          <div class="form-item">
-            <label for="message">Message</label>
+          <div class="mb-3">
+            <label class="form-label" for="message">Message</label>
             <textarea
               id="message"
               name="message"
+              class="form-control"
               rows="5"
               placeholder="Your message"
             ></textarea>
           </div>
-          <button type="submit" class="submit-button">Send message</button>
+          <button type="submit" class="btn btn-outline-success fw-bold">
+            Send message
+          </button>
         </form>
 
-        <div class="contact-links">
+        <div class="d-flex flex-wrap gap-3 mt-3">
           <a
             href="https://www.linkedin.com/in/anne-cecile-mainier-57727923/"
             target="_blank"
@@ -65,10 +105,27 @@
             >GitHub</a
           >
           <a href="mailto:notmyrealemail@gmail.com">Email</a>
-          <a href="tel:0123456789" class="contact-link">Phone</a>
+          <a href="tel:0123456789">Phone</a>
         </div>
       </section>
     </main>
-    <footer>Made with <span class="heart">♥</span> in London</footer>
+    <footer class="py-3 text-center">
+      Made with <span class="heart">♥</span> in London
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+      integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
