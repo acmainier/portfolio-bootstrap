@@ -117,14 +117,20 @@
                     Semantic HTML and CSS styling challenge from Frontend
                     Mentor.
                   </p>
-                  <a
-                    href="https://acmainier.github.io/QR-Code-component/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <!-- Button trigger modal 1 -->
+                  <button
+                    type="button"
                     class="btn btn-outline-success fw-bold align-self-start mt-auto"
-                    role="button"
-                    >View project →</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal"
+                    data-project-title="QR Code Component project"
+                    data-project-description="This is a solution to the QR code component challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects."
+                    data-project-technologies="Built with Semantic HTML5 markup, CSS custom properties and Flexbox."
+                    data-project-lessons="What I learned: in CSS: Use of custom properties for colors and fonts; Use of Flexbox for layout."
+                    data-project-link="https://acmainier.github.io/QR-Code-component/"
                   >
+                    Project details →
+                  </button>
                 </div>
               </article>
             </div>
@@ -141,14 +147,23 @@
                     Age calculation tool built with JavaScript, HTML and CSS
                     styling.
                   </p>
-                  <a
-                    href="https://acmainier.github.io/age-calculator-app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <!-- Button trigger modal 2 -->
+                  <button
+                    type="button"
                     class="btn btn-outline-success fw-bold align-self-start mt-auto"
-                    role="button"
-                    >View project →</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal"
+                    data-project-title="Age calculator"
+                    data-project-description="Age calculation tool built with JavaScript, HTML and CSS styling."
+                    data-project-technologies="Built with JavaScript, HTML and CSS."
+                    data-project-lessons="What I learned:
+              in CSS: @Font-Face for custom Fonts; @keyframes for animation;
+              in Javascript: Adding and removing a css class from the JS code;
+              Work on the addEventListener."
+                    data-project-link="https://acmainier.github.io/age-calculator-app/"
                   >
+                    Project details →
+                  </button>
                 </div>
               </article>
             </div>
@@ -165,14 +180,27 @@
                     IP address and domain tracking tool built with JavaScript.
                     Practice with APIs and responsive design.
                   </p>
-                  <a
-                    href="https://acmainier.github.io/ip-address-tracker/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <!-- Button trigger modal 3 -->
+                  <button
+                    type="button"
                     class="btn btn-outline-success fw-bold align-self-start mt-auto"
-                    role="button"
-                    >View project →</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal"
+                    data-project-title="IP address and domain tracker"
+                    data-project-description="This is a solution to the IP address and domain tracker app
+              challenge on Frontend Mentor."
+                    data-project-technologies="Built with Semantic HTML5 markup, CSS custom properties, Flexbox
+              and Javascript."
+                    data-project-lessons="What I learned:
+              in CSS: Use of pseudo-classes such as placeholder for input, and
+              not last child in the card;
+              in Javascript: Use of an async function fetch info with a
+              third-party API, Use of another third party API to display the
+              result in a map; Try/Catch/Finally to cover the possible errors."
+                    data-project-link="https://acmainier.github.io/ip-address-tracker/"
                   >
+                    Project details →
+                  </button>
                 </div>
               </article>
             </div>
@@ -200,6 +228,47 @@
     <footer class="py-3 text-center">
       Made with <span class="heart">♥</span> in London
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="projectModal"
+      tabindex="-1"
+      aria-labelledby="projectTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="projectTitle"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="projectDescription"></p>
+            <p id="projectTechnologies"></p>
+            <p id="projectLessons"></p>
+            <a href="" target="_blank" rel="noopener noreferrer"
+              >View project on GitHub Pages</a
+            >
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
@@ -215,5 +284,22 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $("#projectModal").on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget);
+        var title = button.data("project-title");
+        var description = button.data("project-description");
+        var technologies = button.data("project-technologies");
+        var lessons = button.data("project-lessons");
+        var link = button.data("project-link");
+
+        var modal = $(this);
+        modal.find("#projectTitle").text(title);
+        modal.find("#projectDescription").text(description);
+        modal.find("#projectTechnologies").text(technologies);
+        modal.find("#projectLessons").text(lessons);
+        modal.find(".modal-body a").attr("href", link);
+      });
+    </script>
   </body>
 </html>

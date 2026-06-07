@@ -6,7 +6,21 @@
   --text-dark: #1b1b1b; /* body text */
   /* --shadow: rgba(0, 0, 0, 0.1);  card shadows */
   --bs-body-bg: var(--off-white);
-  --bs-success: var(--green-dark);
+}
+
+.btn-outline-success {
+  --bs-btn-color: var(--green-dark);
+  --bs-btn-border-color: var(--green-dark);
+  --bs-btn-hover-color: var(--off-white);
+  --bs-btn-hover-bg: var(--green-dark);
+  --bs-btn-hover-border-color: var(--green-dark);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--green-dark);
+  --bs-btn-border-color: var(--green-dark);
+  --bs-btn-hover-bg: var(--green-mid);
+  --bs-btn-hover-border-color: var(--green-mid);
 }
 
 .navbar {
