@@ -67,6 +67,18 @@
             />
           </div>
           <div class="mb-3">
+            <label class="form-label" for="contact-project-date"
+              >Starting date of the project</label
+            >
+            <input
+              type="text"
+              id="contact-project-date"
+              class="form-control"
+              name="project_date"
+              placeholder="Starting date of the project"
+            />
+          </div>
+          <div class="mb-3">
             <label class="form-label" for="email">Email</label>
             <input
               type="email"
@@ -127,5 +139,14 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        $("#contact-project-date")
+          .datepicker({
+            defaultDate: 0,
+          })
+          .datepicker("setDate", new Date());
+      });
+    </script>
   </body>
 </html>
