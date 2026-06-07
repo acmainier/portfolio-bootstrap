@@ -7,8 +7,6 @@
   --bs-body-font-family: "Trebuchet MS", Arial, sans-serif;
   --bs-body-color: var(--text-dark);
   --bs-body-bg: var(--off-white);
-  --bs-link-color: var(--green-dark);
-  --bs-link-hover-color: var(--green-mid);
 }
 
 .btn-outline-success {
@@ -49,7 +47,12 @@
 }
 
 a {
+  color: var(--green-dark);
   font-weight: 600;
+}
+
+a:hover {
+  color: var(--green-mid);
 }
 
 h2 {
